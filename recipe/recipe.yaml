@@ -1,6 +1,6 @@
 context:
   name: subfinder
-  version: "2.7.0"
+  version: "2.7.1"
 
 package:
   name: ${{ name|lower }}
@@ -8,12 +8,12 @@ package:
 
 source:
   - url: https://github.com/projectdiscovery/${{ name }}/archive/refs/tags/v${{ version }}.tar.gz
-    sha256: 8f3d2867572e13917d8386f8d4fc88f80524c826facd91baed722b9bfd6026a5
+    sha256: 11ddc1113ba6bfc6db1aeb8bdd97908ceed230e3e4911e9a6905c35f0795b2e2
   - url: https://raw.githubusercontent.com/xi2/xz/refs/heads/master/LICENSE
     sha256: 5c640056d513f276d56635af7a0bed81cb7eac02a31b6e56d40c416557a8d8ce
     file_name: xz-LICENSE-1
   - url: https://raw.githubusercontent.com/tukaani-project/xz/refs/heads/master/COPYING
-    sha256: aedbbc280610875b83e246f05957369f84acf9abdb86b884a9ff2f5dd65e8ffb
+    sha256: 616a3ad264ce29b8f1cb97e53037b139d406899ca8d1f799651e17bfa09830b8
     file_name: xz-LICENSE-2
 
 build:
@@ -25,7 +25,7 @@ build:
       else:
         - go build -o %PREFIX%\bin\subfinder.exe .\cmd\subfinder
     - go-licenses save ./cmd/subfinder --save_path=../library_licenses --ignore=github.com/projectdiscovery/subfinder --ignore github.com/xi2/xz
-  number: 1
+  number: 0
 
 requirements:
   build:
