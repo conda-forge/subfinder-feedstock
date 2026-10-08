@@ -1,6 +1,6 @@
 context:
   name: subfinder
-  version: "2.16.0"
+  version: "2.17.0"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   - url: https://github.com/projectdiscovery/${{ name }}/archive/refs/tags/v${{ version }}.tar.gz
-    sha256: 12b1f287b56a38773d83f995a648f2609eeb289e773583c53b6dc841d6d52d9f
+    sha256: f9fffdfac6b9668eb8497e661a6ccd24cf83a0f459a41902ad0a782e63b39a2b
   - url: https://raw.githubusercontent.com/xi2/xz/refs/heads/master/LICENSE
     sha256: 5c640056d513f276d56635af7a0bed81cb7eac02a31b6e56d40c416557a8d8ce
     file_name: xz-LICENSE-1
